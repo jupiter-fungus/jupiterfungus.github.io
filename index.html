@@ -8,62 +8,55 @@
       body {
         margin: 0;
         padding: 0;
-        overflow: hidden;
         font-family: "Arial", sans-serif;
         background: #000;
       }
 
-      header {
-        text-align: center;
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-      }
-
-      #fullscreen-bg {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        z-index: -1;
-      }
-
-      #fullscreen-bg img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+        display: flex;
+        text-align: left;
         width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        line-height: 140%;
       }
 
       #logo {
-        max-width: 800px;
+        flex: 1;
+        max-width: 800px;          /* Ensure the image scales down if it's too large */
         margin-bottom: 20px;
         padding: 20px;
         background: black;
       }
 
       #audio-player {
-        margin-top: 20px;
-        max-width: 800px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        flex: 1;
+      }
+
+      #album-info {
+        flex: 2;
+        font-size: 120%;
       }
 
       #band-photo {
         display: hidden;
         max-width: 100%;
-        margin-top: 20px;
+        margin-top: 12px;
+      }
+
+      ul {
+        list-style-type: none;
+        margin-top: 32px;
+        padding: 0;
+        font-size: 80%;
       }
 
       @media only screen and (max-width: 800px) {
@@ -75,12 +68,10 @@
   </head>
 
   <body>
-    <div id="fullscreen-bg">
-      <img src="cover.jpg" alt="Garden Electric" />
-    </div>
-
-    <div class="content">
+    <div class="header">
       <img id="logo" src="logo.png" alt="Jupiter Fungus" />
+    </div>
+    <div class="content">
 
       <div id="audio-player">
         <iframe
@@ -91,6 +82,70 @@
             >Garden Electric by Jupiter Fungus</a
           ></iframe
         >
+      </div>
+      <div id="album-info">
+        <div>
+          Sound Effects Records, presents “Garden Electric”, the debut album by,
+          Greece’s best-kept prog-rock secret, Jupiter Fungus! Essentially a duo,
+          with the aid of select studio musicians, Jupiter Fungus combine
+          captivating themes with meticulous arrangements and passionate
+          performances, not unlike their heroes. Their holistic approach, incl.
+          their breathtaking artwork, adds to the legacy of “Garden Electric”,
+          making for one of the best new albums of the genre. “Garden Electric”
+          shall be out on limited gatefold vinyl, CD and digital on November 1st,
+          2024.
+        <div>
+        <hr>
+        <ul>
+          <li>
+            Ares Papatriantafillou: Vocals, Keyboards, Guitar (Ear Intro)
+          </li>
+          <li>
+            Fotis Xenikoudakis: Flute, Tin Whistle
+          </li>
+          <li>
+            George Papageorgiou: Bass, Acoustic Guitar, Glockenspiel
+          </li>
+          <li>
+            George Emmanuel: Electric Guitar
+          </li>
+          <li>
+            Nick Vell: Drums
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Music by Ares Papatriantafillou & Fotis Xenikoudakis
+          </li>
+          <li>
+            Lyrics by Ares Papatriantafillou exc. Thoughts of Revenge by Konstantinos Vrettos
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Recorded & Mixed by George Emmanuel at Pentagram Music Studio
+          </li>
+          <li>
+            Mastered by Jaime Gomez Arellano at Orgone Studio
+          </li>
+          <li>
+            Drum Recordings at Dudu Loft Studio
+          </li>
+          <li>
+            Additional Recordings at Seventh Floor Studio
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Artwork by Fotis Xenikoudakis
+          </li>
+          <li>
+            Layout by George Fotopoulos
+          </li>
+          <li>
+            Photography by Petros Athanasakos & George Papageorgiou    
+          </li>
+        </ul>
       </div>
     </div>
   </body>
